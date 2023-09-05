@@ -33,8 +33,9 @@ struct ContentView: View {
                         .padding()
                         .frame(width:300, height:50)
                         .background(Color.black.opacity(0.05))
-                        .border(.red, width: CGFloat(wrongUsername))
                         .cornerRadius(10)
+                        .border(.red, width: CGFloat(wrongUsername))
+                        
                     SecureField("Password", text: $password)
                         .padding()
                         .frame(width: 300, height: 50)
@@ -49,7 +50,7 @@ struct ContentView: View {
                     .background(.blue)
                     .cornerRadius(10)
                     
-                    NavigationLink(destination: Text("You are logged in @\(username)"), isActive: $showingLoginScreen){
+                    NavigationLink(destination: ViewOne(), isActive: $showingLoginScreen){
                         EmptyView()
                     }
                 }
